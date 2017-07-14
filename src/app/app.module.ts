@@ -17,11 +17,13 @@ import {
 } from './injection.tokens'
 import { MovieService } from './services/movie.service';
 import { FilterOnMoviesPipe } from './pipes/filter-on-movies.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     LandingPageComponent,
     MovieCardComponent,
     SpinnerComponent,
-    FilterOnMoviesPipe
+    FilterOnMoviesPipe,
+    TruncatePipe,
+    MovieDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

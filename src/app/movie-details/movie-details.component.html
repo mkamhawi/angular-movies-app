@@ -1,0 +1,89 @@
+<div class="alert alert-danger" *ngIf="errorMsg">
+  {{errorMsg}}
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <article *ngIf="movie">
+      <header>
+        <div class="header-div poster-container">
+          <img class="movie-poster" 
+            [src]="posterUrl" 
+            [alt]="movie.title" 
+            [title]="movie.title">
+        </div>
+        <div class="header-div info">
+          <h2 class="title">{{ movie.title }}</h2>
+          <h4 class="tagline">{{ movie.tagline }}</h4>
+          <div class="snippets">
+            <span class="status">
+            <i class="fa fa-info-circle" aria-hidden="true" style="color:#FFD700"></i>
+              {{ movie.status }}
+            </span>
+            <span class="rating">
+              <i class="fa fa-star" aria-hidden="true" style="color:#D6B400"></i>
+              {{ movie.vote_average }}
+            </span>
+          </div>
+          <div class="snippets">
+            <span 
+              class="language"
+              *ngFor="let language of movie.spoken_languages">
+              <i class="fa fa-globe" aria-hidden="true" style="color:#3B73B1"></i>
+              {{ language.name }}
+            </span>
+          </div>
+          <div>
+            <span 
+              class="genre"
+              *ngFor="let genre of movie.genres">
+              <i class="fa fa-tag" aria-hidden="true" style="color:#59CEA7"></i>
+              {{ genre.name }}
+            </span>
+          </div>
+        </div>
+      </header>
+      <p class="plot">{{ movie.overview }}</p>
+      <a
+        *ngFor="let trailer of movie.trailers.youtube"
+        href="https://youtube.com/watch?v={{ trailer.source }}"
+        target="_blank"
+        class="trailer">
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        {{ trailer.name }}
+      </a>
+      <h4
+        *ngIf="movie.reviews.results.length > 0" 
+        class="reviews-title">
+        {{"user reviews" | uppercase}}
+      </h4>
+      <div
+        *ngFor="let review of movie.reviews.results"
+        class="review">
+        <span class="review-author">{{ review.author }}</span>
+        <p
+          class="review-content" 
+          [hidden]="expandedReviewId == review.id">
+            {{ review.content | truncate: descriptionLimit }}
+            <a
+              *ngIf="expandedReviewId != review.id && review.content.length > descriptionLimit"
+              (click)="expandDescription(review.id)"
+              class="toggle-content">
+              ...
+            </a>
+          </p>
+          <p
+            class="review-content" 
+            [hidden]="expandedReviewId != review.id">
+            {{ review.content }}
+            <a
+              *ngIf="expandedReviewId == review.id && review.content.length > descriptionLimit"
+              (click)="contractDescription()"
+              class="toggle-content">
+              .
+            </a>
+          </p>
+      </div>
+    </article>
+  </div>
+</div>
+<app-spinner [isRunning]="isLoading"></app-spinner>

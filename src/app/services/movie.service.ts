@@ -34,8 +34,8 @@ export class MovieService {
       .catch(this.handleError);
   }
 
-  public getMovieDetails(movieId: number): Observable<MovieDetails> {
-    const url = `${this.baseUrl}/${movieId.toString()}`;
+  public getMovieDetails(movieId: string): Observable<MovieDetails> {
+    const url = `${this.baseUrl}/${movieId}`;
     const params = new URLSearchParams();
     params.set('api_key', this.apiKey);
     params.set('append_to_response', 'trailers,reviews');
