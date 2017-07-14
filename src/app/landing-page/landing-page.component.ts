@@ -21,6 +21,7 @@ export class LandingPageComponent implements OnInit {
   movies: Movie[];
   errorMsg = '';
   isLoading = false;
+  searchMovies: string;
 
   constructor(
     private movieService: MovieService
@@ -61,6 +62,10 @@ export class LandingPageComponent implements OnInit {
   private changeSelectedCategory(category: string): void {
     this.selectedCategory = category;
     this.resetPageStatus();
+  }
+
+  private setFilterSearchText(event: any): void {
+    this.searchMovies = event.target.value;
   }
 
   private getCategoryName(categoryKey: string): string {

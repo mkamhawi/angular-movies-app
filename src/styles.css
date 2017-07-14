@@ -4,17 +4,6 @@
   font-family: Roboto, sans-serif !important;
 }
 
-.error {
-  width: 100%;
-  padding: 5px;
-  margin: 0;
-  text-align: center;
-  font-weight: 700;
-  font-size: 14px;
-  color: #FFF;
-  background-color: #B33;
-}
-
 .loading-spinner-container {
   position: absolute;
   top: 0;

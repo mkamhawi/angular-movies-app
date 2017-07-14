@@ -16,6 +16,7 @@ import {
   YOUTUBE_BASE_URL
 } from './injection.tokens'
 import { MovieService } from './services/movie.service';
+import { FilterOnMoviesPipe } from './pipes/filter-on-movies.pipe';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -27,7 +28,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     AppComponent,
     LandingPageComponent,
     MovieCardComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FilterOnMoviesPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

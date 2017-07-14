@@ -1,4 +1,4 @@
-<div class="error" *ngIf="errorMsg">
+<div class="alert alert-danger" *ngIf="errorMsg">
   {{errorMsg}}
 </div>
 <div class="row control-center">
@@ -10,10 +10,15 @@
       *ngFor="let category of availableCategories">
       {{ getCategoryName(category) }}
     </a>
+    <input type="text"
+      class="form-control movie-filter"
+      onFocus="this.select();"
+      placeholder="filter on title"
+      (keyup)="setFilterSearchText($event)">
   </div>
 </div>
 <div class="row container-fluid">
-  <app-movie-card *ngFor="let movie of movies" [movie]="movie">
+  <app-movie-card *ngFor="let movie of movies | filterOnMovies: searchMovies" [movie]="movie">
   </app-movie-card>
 </div>
 <div class="row">
