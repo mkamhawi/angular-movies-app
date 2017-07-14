@@ -1,0 +1,30 @@
+<div class="error" *ngIf="errorMsg">
+  {{errorMsg}}
+</div>
+<div class="row control-center">
+  <div class="col-md-12">
+    <a 
+      class="btn btn-default movie-category"
+      [ngClass]="{'btn-success': category === selectedCategory}"
+      (click)="changeSelectedCategory(category)"
+      *ngFor="let category of availableCategories">
+      {{ getCategoryName(category) }}
+    </a>
+  </div>
+</div>
+<div class="row container-fluid">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie">
+  </app-movie-card>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="load-more">
+          <a 
+            class="btn btn-default" 
+            (click)="getMovies()"
+            *ngIf="pageNumber < totalPages">
+            more
+          </a>
+    </div>
+  </div>
+</div>

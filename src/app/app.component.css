@@ -1,0 +1,14 @@
+header {
+    border-bottom: #343434 solid 3px;
+    margin-bottom: 34px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #343434;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+}

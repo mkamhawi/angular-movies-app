@@ -1,0 +1,14 @@
+.movie-category {
+    border: 1px solid #4cae4c;
+    margin: 5px;
+}
+
+.movie-category:hover {
+    background-color: #5cb85c;
+    color: #FFF;
+}
+
+.load-more {
+    padding: 10px;
+    text-align: center;
+}
