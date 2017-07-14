@@ -20,12 +20,14 @@ import { MovieService } from './services/movie.service';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    SpinnerComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

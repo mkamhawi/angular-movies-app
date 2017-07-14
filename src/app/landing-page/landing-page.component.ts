@@ -20,6 +20,7 @@ export class LandingPageComponent implements OnInit {
   totalPages: number;
   movies: Movie[];
   errorMsg = '';
+  isLoading = false;
 
   constructor(
     private movieService: MovieService
@@ -39,15 +40,18 @@ export class LandingPageComponent implements OnInit {
   private getMovies(): void {
     this.pageNumber++;
     this.errorMsg = '';
+    this.isLoading = true;
     this.movieService.getMovies(this.selectedCategory, this.pageNumber)
           .subscribe(
             movieCollection => {
               console.log(movieCollection);
+              this.isLoading = false;
               this.totalPages = movieCollection.total_pages;
               this.movies = this.movies.concat(movieCollection.results);
             },
             error => {
               console.log(error);
+              this.isLoading = false;
               this.errorMsg = error;
               this.pageNumber--;
             }
