@@ -1,5 +1,13 @@
 .movie-poster {
-    width: 185px;
-    height: 266px;
+    width: 14.5vw;
+    height: 22.2vw;
     margin: 10px 0;
+}
+
+@media all and (max-width: 767px) {
+    .movie-poster {
+        width: 22.2vw;
+        height: 33.4vw;
+        margin: 5px 0;
+    }
 }

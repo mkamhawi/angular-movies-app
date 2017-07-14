@@ -1,5 +1,5 @@
 header {
-    border-bottom: #343434 solid 3px;
+    border-bottom: #343434 solid 1px;
     margin-bottom: 34px;
 }
 
@@ -11,4 +11,23 @@ header {
     text-align: center;
     letter-spacing: 3px;
     word-spacing: 8px;
+}
+
+.app {
+    padding-bottom: 34px;
+}
+
+footer {
+    width: 100%;
+    margin: 5px 0 0 0;
+    background-color: #f9fcfd;
+    color: #343434;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
