@@ -20,7 +20,7 @@ export class LandingPageComponent implements OnInit {
   totalPages: number;
   movies: Movie[];
   errorMsg = '';
-  isLoading = false;
+  public isLoading = false;
   searchMovies: string;
 
   constructor(
@@ -64,7 +64,7 @@ export class LandingPageComponent implements OnInit {
     this.resetPageStatus();
   }
 
-  private setFilterSearchText(event: any): void {
+  public setFilterSearchText(event: any): void {
     this.searchMovies = event.target.value;
   }
 

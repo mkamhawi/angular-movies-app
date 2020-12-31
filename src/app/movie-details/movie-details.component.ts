@@ -11,10 +11,10 @@ import { POSTER_BASE_URL } from '../injection.tokens';
 })
 export class MovieDetailsComponent implements OnInit {
   private movieId: string;
-  private errorMsg: string;
-  private movie: MovieDetails;
+  public errorMsg: string;
+  public movie: MovieDetails;
   private posterUrl: string;
-  private isLoading = false;
+  public isLoading = false;
   private expandedReviewId: string;
   private descriptionLimit = 300;
 
