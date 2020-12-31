@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router/esm2015';
+import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../services/movie.service';
 import { MovieDetails } from '../models/movie-details';
 import { POSTER_BASE_URL } from '../injection.tokens';

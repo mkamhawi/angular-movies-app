@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser/esm2015';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router/esm2015';
+import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import {
   MoviesApiKey,
