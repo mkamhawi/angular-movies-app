@@ -1,6 +1,6 @@
 {
   "name": "angular-movies-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -43,7 +43,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
-    "tslint": "~5.3.2",
+    "tslint": "^5.20.1",
     "typescript": "~2.3.3"
   }
 }
