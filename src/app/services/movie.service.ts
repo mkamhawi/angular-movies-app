@@ -1,7 +1,7 @@
 import {throwError as observableThrowError,  Observable } from 'rxjs';
 
-import {catchError, map} from 'rxjs/operators';
-import { Injectable, Inject } from '@angular/core';
+import {catchError} from 'rxjs/operators';
+import { Injectable, Inject } from '@angular/core/esm2015';
 import {
   HttpClient,
   HttpHeaders
