@@ -36,7 +36,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     MovieDetailsComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     BrowserModule,
     HttpClientModule
   ],

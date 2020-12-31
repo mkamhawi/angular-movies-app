@@ -1,8 +1,6 @@
 # Angular Movies App
 A single page app for listing movies according to several categories, displaying basic info about each movie. built on [Angular](https://angular.io/).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
-
 ## Notes
 - This app uses [The Movie Database APIs](https://www.themoviedb.org/). To run the app, you need an API key:
   - Create an account [here](https://www.themoviedb.org/account/signup). using this account you can generate the API key.
