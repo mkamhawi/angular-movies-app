@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import {
@@ -38,7 +38,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
     {provide: MOVIES_API_KEY, useValue: MoviesApiKey},
