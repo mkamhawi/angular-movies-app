@@ -8,7 +8,7 @@ WORKDIR /angular_movies_app
 
 COPY . .
 
-RUN $(npm bin)/ng build --prod
+RUN npm run ng build --prod
 
 FROM nginx
 
